@@ -1,0 +1,922 @@
+use javaminiproject;
+set foreign_key_checks = 0;
+
+INSERT INTO undergraduate (ug_id, ug_batch) VALUES
+('TG1344', 7),
+('TG1345', 7),
+('TG1346', 7),
+('TG1347', 7),
+('TG1348', 7),
+('TG1349', 7),
+('TG1350', 7),
+('TG1351', 7),
+('TG1352', 7),
+('TG1353', 7),
+('TG1354', 7),
+('TG1355', 7),
+('TG1356', 7),
+('TG1357', 7),
+('TG1358', 7),
+('TG1359', 7),
+('TG1360', 7),
+('TG1361', 7),
+('TG1362', 7),
+('TG1363', 7);
+
+INSERT INTO lecturer (lec_id) VALUES
+('LC0001'),
+('LC0002'),
+('LC0003'),
+('LC0004'),
+('LC0005');
+
+INSERT INTO tech_officer (to_id, to_department) VALUES
+('TO0001', 'ICT'),
+('TO0002', 'ET'),
+('TO0003', 'BST'),
+('TO0004', 'BST');
+
+
+INSERT INTO user (user_id, user_password, user_name, user_email, user_phone, user_pro_pic, user_role)
+VALUES ('AD0001', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'admin', 'admin@gmail.com', '0772348687', NULL, 'admin'),
+('LC0001', '88d89b9eb92c756c063c71ceba9ecd40bc00ece40fb38d0018c4cce0d8cdaaa2', 'Lecturer 01', 'lect01@example.com', 712345601, NULL, 'lecturer'),
+('LC0002', 'a4c1a193a793fced2101d743d417dad384a094e9bbf0f9b2e9d6992d3575d5e6', 'Lecturer 02', 'lect02@example.com', 712345602, NULL, 'lecturer'),
+('LC0003', '28c8417490d21ac527d133c715c21478ceabaaa9b48f8df653c6bad144d8a690', 'Lecturer 03', 'lect03@example.com', 712345603, NULL, 'lecturer'),
+('LC0004', '5561c4af656e91af3b3d4a1a598755eae73a4db887470d8f65a60bc075107934', 'Lecturer 04', 'lect04@example.com', 712345604, NULL, 'lecturer'),
+('LC0005', '6b715d286787ebf6d67234900141338d95e8d844ba9ce7def27613e08c17ba15', 'Lecturer 05', 'lect05@example.com', 712345605, NULL, 'lecturer'),
+('TG1344', 'fa66ed652b77f7a4bbc9e07201ea3e37cdef4e8e130890b137aa5f55a65af1d0', 'User 01', 'user01@example.com', 713343561, 'NULL', 'undergraduate'),
+('TG1345', 'c4f7128356088f8e74c41aa91d415f173b83167480ee47129be8253e77d722a2', 'User 02', 'user02@example.com', 713343562, NULL, 'undergraduate'),
+('TG1346', '3f775524adec11728ffaebc0310cfe2588aa8f6e47eedc9923f33147a15a42ef', 'User 03', 'user03@example.com', 713343563, NULL, 'undergraduate'),
+('TG1347', '705708610ee2c13dab594519bc4055253e22795dbeb84d836648daf54122dd7b', 'User 04', 'user04@example.com', 713343564, NULL, 'undergraduate'),
+('TG1348', 'b783eb8079ce216a8f18bc5bd244353f5e8262996577ad3568b20342daf7df06', 'User 05', 'user05@example.com', 713343565, NULL, 'undergraduate'),
+('TG1349', 'a570267818e4c93205ed31b887bd7563fedab6ffe24e830c7d00e3652c2567ea', 'User 06', 'user06@example.com', 713343566, NULL, 'undergraduate'),
+('TG1350', '3dab67719e06c940efebbb8ee864e7ab1d8e3ad6bd2c93a67f24db24a687c90a', 'User 07', 'user07@example.com', 713343567, NULL, 'undergraduate'),
+('TG1351', '7316b3777a82e4153a2637f2582b1ea6ecacd68fed9622ae04c640a47f6b6092', 'User 08', 'user08@example.com', 713343568, NULL, 'undergraduate'),
+('TG1352', 'd4fb32b4d740ae2b27c93bda920b92eebca3578ad2e5e2f052737ee72a31f31e', 'User 09', 'user09@example.com', 713343569, NULL, 'undergraduate'),
+('TG1353', 'b35892cb8b089e03e4420b94df688122a2b76d4ad0f8b94ad20808bb029e48a5', 'User 10', 'user10@example.com', 713343570, NULL, 'undergraduate'),
+('TG1354', '8057f787ebd8b4f9d40f53d7fbbfcbdde7067c1a074435b68f525b3de0e2ac2b', 'User 11', 'user11@example.com', 713343571, NULL, 'undergraduate'),
+('TG1355', 'fdac810d0c09f25c5ddcee9976ab1f1ae1973dba7c65152d95b0937bc2a6c883', 'User 12', 'user12@example.com', 713343572, NULL, 'undergraduate'),
+('TG1356', '1e53de2a2b4ab888cc24002ef8832d433b21956ab83ddeef989c8224b5c8f9f2', 'User 13', 'user13@example.com', 713343573, NULL, 'undergraduate'),
+('TG1357', 'b78f24953963ac5ed773d6ec83120e3b1a65510201dc09ed2ed9e9781ba88870', 'User 14', 'user14@example.com', 713343574, NULL, 'undergraduate'),
+('TG1358', 'b5a4ec869015095060b1171791334513f741177c4011e2c5c36e3e37a5ff8e5f', 'User 15', 'user15@example.com', 713343575, NULL, 'undergraduate'),
+('TG1359', 'f0c28ba3fd9e0dcdcd0470acfcb98cc5a58d7d93422dbbefb930455ef714c87d', 'User 16', 'user16@example.com', 713343576, NULL, 'undergraduate'),
+('TG1360', '4a6b7fa040bcfc734a113fee84d3789c0a626d70d029afad0d1c3e7b6c562e14', 'User 17', 'user17@example.com', 713343577, NULL, 'undergraduate'),
+('TG1361', 'b99ddd77e59c96b13b64b3abe1902db4c0a76dabf8622aa6c71f8f5670be6625', 'User 18', 'user18@example.com', 713343578, NULL, 'undergraduate'),
+('TG1362', '871431053023291d24b403f1f9d761c6f01b3050a0a83cd9d9759a970f8d4d92', 'User 19', 'user19@example.com', 713343579, NULL, 'undergraduate'),
+('TG1363', '51d11024031a8951b4722671adfc8587538f5e5417206e7862e60752758a5c35', 'User 20', 'user20@example.com', 713343580, NULL, 'undergraduate'),
+('TO0001', 'c1140238c60aca29044da268bb77eff535e7e36c7035a9189291453be48eda8c', 'Tech Officer 01', 'tech01@example.com', 712345601, NULL, 'tech_officer'),
+('TO0002', 'e223d0916d5bad453f44a98dc1affc859d6e493eef5d8bf771386a72765e044b', 'Tech Officer 02', 'tech02@example.com', 712345602, NULL, 'tech_officer'),
+('TO0003', '40e9ecb24b61af6645ba5321e07e88b666aedefc1f3dff894009aaf6f6d153e3', 'Tech Officer 03', 'tech03@example.com', 712345603, NULL, 'tech_officer'),
+('TO0004', '5c1ac5fa2f56b7b76432c83eeb7ae23f0b617ceac6b061d78b0643b6ad48c7d5', 'Tech Officer 04', 'tech04@example.com', 712345604, NULL, 'tech_officer');
+
+
+insert into course values
+('ict2113','Data Structures and Algorithms','LC0001','3','both'),
+('ict2122','Object Oriented Programming','LC0002','2','theory'),
+('ict2133','Server Side Web Development','LC0003','3','both'),
+('ict2142','Object Oriented Analysis and Design','LC0004','3','practical'),
+('ict2152','E-Commerce Implementation, Management and Security','LC0005','3','theory');
+
+INSERT INTO lecture_materials (course_id, material_name, material_path, material_type) VALUES
+('ict2113', 'Lab3_answers', 'src/LectureMaterials/DSA/Lab3_answers.pdf', 'pdf'),
+('ict2113', 'Lab3_DSA', 'src/LectureMaterials/DSA/Lab3_DSA.pdf', 'pdf'),
+('ict2152', 'ICT2152_Lecture01', 'src/LectureMaterials/ECommerce/ICT2152_Lecture01.pdf', 'pdf'),
+('ict2152', 'ICT2152_Lecture02', 'src/LectureMaterials/ECommerce/ICT2152_Lecture02.pdf', 'pdf'),
+('ict2142', 'Lecture_01', 'src/LectureMaterials/OOAD/Lecture_01.pdf', 'pdf'),
+('ict2142', 'Lecture_02', 'src/LectureMaterials/OOAD/Lecture_02.pdf', 'pdf'),
+('ict2122', 'Lesson_01_Introduction_to_Java', 'src/LectureMaterials/OOP/Lesson_01_Introduction_to_Java.pdf', 'pdf'),
+('ict2122', 'Lesson_02_Control_Statements_and_Arrays', 'src/LectureMaterials/OOP/Lesson_02_Control_Statements_and_Arrays.pdf', 'pdf'),
+('ict2133', 'Lesson_02', 'src/LectureMaterials/PHP/Lesson_02.pdf', 'pdf'),
+('ict2133', 'Lesson_01', 'src/LectureMaterials/PHP/Lesson_01.pdf', 'pdf');
+
+
+INSERT INTO attendance (to_id, ug_id, course_id, atten_date, session_type, atten_status) VALUES
+-- ict2122 - theory only4
+('TO0001', 'TG1344', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0002', 'TG1345', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0003', 'TG1346', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0005', 'TG1348', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0005', 'TG1353', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0002', 'TG1345', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0003', 'TG1346', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0005', 'TG1348', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2122', '2025-04-01', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2122', '2025-04-01', 'theory', 'medical'),
+('TO0001', 'TG1363', 'ict2122', '2025-04-01', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2122', '2025-04-01', 'theory', 'present'),
+
+-- ict2152 - theory only)1
+
+('TO0001', 'TG1344', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0002', 'TG1345', 'ict2152', '2025-04-02', 'theory', 'medical'),
+('TO0003', 'TG1346', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0005', 'TG1348', 'ict2152', '2025-04-02', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2152', '2025-04-02', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2152', '2025-04-02', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2152', '2025-04-02', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2152', '2025-04-02', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2152', '2025-04-02', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2152', '2025-04-02', 'theory', 'present'),
+
+
+-- ict2113 – both5
+('TO0001', 'TG1344', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-03', 'theory', 'medical'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-03', 'practical', 'medical'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-03', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-03', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-03', 'theory', 'medical'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-03', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-03', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-03', 'theory', 'medical'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-03', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-03', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-03', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-03', 'practical', 'present'),
+
+
+
+-- ict2133 – both
+('TO0001', 'TG1344', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-04', 'theory', 'medical'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-04', 'practical', 'medical'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-04', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-04', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-04', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-04', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-04', 'theory', 'absent'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-04', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-04', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-04', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-04', 'practical', 'present'),
+
+-- ict2142 – patrical  only 2
+    ('TO0001', 'TG1344', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0002', 'TG1345', 'ict2142', '2025-04-05', 'practical', 'medical'),
+    ('TO0003', 'TG1346', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0004', 'TG1347', 'ict2142', '2025-04-05', 'practical', 'medical'),
+    ('TO0005', 'TG1348', 'ict2142', '2025-04-05', 'practical', 'absent'),
+    ('TO0001', 'TG1349', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0002', 'TG1350', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0003', 'TG1351', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0004', 'TG1352', 'ict2142', '2025-04-05', 'practical', 'absent'),
+    ('TO0005', 'TG1353', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0001', 'TG1354', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0002', 'TG1355', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0003', 'TG1356', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0004', 'TG1357', 'ict2142', '2025-04-05', 'practical', 'absent'),
+    ('TO0005', 'TG1358', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0002', 'TG1359', 'ict2142', '2025-04-05', 'practical', 'absent'),
+    ('TO0003', 'TG1360', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0004', 'TG1361', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0005', 'TG1362', 'ict2142', '2025-04-05', 'practical', 'absent'),
+    ('TO0001', 'TG1363', 'ict2142', '2025-04-05', 'practical', 'present'),
+    ('TO0002', 'TG1364', 'ict2142', '2025-04-05', 'practical', 'present'),
+
+-- ict2122 - theory only4
+('TO0001', 'TG1344', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0002', 'TG1345', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0003', 'TG1346', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0005', 'TG1348', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2122', '2025-04-06', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2122', '2025-04-06', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2122', '2025-04-06', 'theory', 'present'),
+
+-- ict2152 - theory only)1
+
+('TO0001', 'TG1344', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0002', 'TG1345', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0003', 'TG1346', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0005', 'TG1348', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2152', '2025-04-07', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2152', '2025-04-07', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2152', '2025-04-07', 'theory', 'present'),
+
+-- ict2113 – both5
+('TO0001', 'TG1344', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-08', 'practical', 'absent'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-08', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-08', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-08', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-08', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-08', 'practical', 'present'),
+
+-- ict2133 – both
+('TO0001', 'TG1344', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-09', 'practical', 'absent'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-09', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-09', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-09', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-09', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-09', 'practical', 'present'),
+
+-- ict2142 – patrical  only 2
+('TO0001', 'TG1344', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0003', 'TG1346', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0005', 'TG1348', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0001', 'TG1349', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0004', 'TG1352', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0005', 'TG1353', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0005', 'TG1358', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0002', 'TG1359', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0003', 'TG1360', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0004', 'TG1361', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0005', 'TG1362', 'ict2142', '2025-04-10', 'practical', 'absent'),
+('TO0001', 'TG1363', 'ict2142', '2025-04-10', 'practical', 'present'),
+('TO0002', 'TG1364', 'ict2142', '2025-04-10', 'practical', 'present'),
+
+-- ict2122 - theory only4
+('TO0001', 'TG1344', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0002', 'TG1345', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0003', 'TG1346', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0005', 'TG1348', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2122', '2025-04-11', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2122', '2025-04-11', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2122', '2025-04-11', 'theory', 'present'),
+
+-- ict2152 - theory only)1
+
+('TO0001', 'TG1344', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0002', 'TG1345', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0003', 'TG1346', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0005', 'TG1348', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0001', 'TG1349', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0005', 'TG1353', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0001', 'TG1354', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0004', 'TG1357', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0005', 'TG1358', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0002', 'TG1359', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0003', 'TG1360', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0004', 'TG1361', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0005', 'TG1362', 'ict2152', '2025-04-12', 'theory', 'absent'),
+('TO0001', 'TG1363', 'ict2152', '2025-04-12', 'theory', 'present'),
+('TO0002', 'TG1364', 'ict2152', '2025-04-12', 'theory', 'present'),
+
+-- ict2113 – both5
+('TO0001', 'TG1344', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0002', 'TG1345', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2113', '2025-04-13', 'practical', 'absent'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2113', '2025-04-13', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0005', 'TG1353', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0001', 'TG1360', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-13', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2113', '2025-04-13', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-13', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2113', '2025-04-13', 'practical', 'present'),
+
+-- ict2133 – both
+('TO0001', 'TG1344', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0001', 'TG1344', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0002', 'TG1345', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0003', 'TG1346', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0004', 'TG1347', 'ict2133', '2025-04-14', 'practical', 'absent'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0005', 'TG1348', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0001', 'TG1349', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0002', 'TG1350', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0003', 'TG1351', 'ict2133', '2025-04-14', 'practical', 'absent'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0004', 'TG1352', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0005', 'TG1353', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0001', 'TG1354', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0002', 'TG1355', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0003', 'TG1356', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0004', 'TG1357', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0005', 'TG1358', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0005', 'TG1359', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0001', 'TG1360', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0002', 'TG1361', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0003', 'TG1362', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-14', 'theory', 'absent'),
+('TO0004', 'TG1363', 'ict2133', '2025-04-14', 'practical', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-14', 'theory', 'present'),
+('TO0005', 'TG1364', 'ict2133', '2025-04-14', 'practical', 'present'),
+
+-- ict2142 – patrical  only 2
+('TO0001', 'TG1344', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0002', 'TG1345', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0003', 'TG1346', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0004', 'TG1347', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0005', 'TG1348', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0001', 'TG1349', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0002', 'TG1350', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0003', 'TG1351', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0004', 'TG1352', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0005', 'TG1353', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0001', 'TG1354', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0002', 'TG1355', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0003', 'TG1356', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0004', 'TG1357', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0005', 'TG1358', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0002', 'TG1359', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0003', 'TG1360', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0004', 'TG1361', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0005', 'TG1362', 'ict2142', '2025-04-15', 'practical', 'absent'),
+('TO0001', 'TG1363', 'ict2142', '2025-04-15', 'practical', 'present'),
+('TO0002', 'TG1364', 'ict2142', '2025-04-15', 'practical', 'present');
+
+
+INSERT INTO medical (medical_id, ug_id, course_id, session_type, reason, medical_date, to_id, atten_id) VALUES
+(1, 'TG1344', 'ict2122', 'theory', 'Cough', '2025-04-01', 'to0001', 1),
+(2, 'TG1345', 'ict2122', 'theory', 'Fever', '2025-04-01', 'to0001', 2),
+(3, 'TG1348', 'ict2122', 'theory', 'Headache', '2025-04-01', 'to0001', 5),
+(4, 'TG1352', 'ict2122', 'theory', 'Dental', '2025-04-01', 'to0001', 9),
+(5, 'TG1362', 'ict2122', 'theory', 'Fever', '2025-04-01', 'to0001', 19),
+(6, 'TG1345', 'ict2152', 'theory', 'Stomachache', '2025-04-02', 'to0001', 23),
+(7, 'TG1345', 'ict2113', 'theory', 'Leg Broke', '2025-04-03', 'to0001', 45),
+(8, 'TG1347', 'ict2113', 'practical', 'Hand broken', '2025-04-03', 'to0001', 50),
+(9, 'TG1353', 'ict2113', 'theory', 'Nose broken', '2025-04-03', 'to0001', 61),
+(10, 'TG1360', 'ict2113', 'theory', 'Fever', '2025-04-03', 'to0001', 75),
+(11, 'TG1345', 'ict2133', 'theory', 'Accident', '2025-04-04', 'to0001', 87),
+(12, 'TG1347', 'ict2133', 'practical', 'Accident Again', '2025-04-04', 'to0001', 92),
+(13, 'TG1347', 'ict2142', 'practical', 'Virus Fever', '2025-04-05', 'to0001', 130),
+(14, 'TG1345', 'ict2142', 'practical', 'Bus Accident', '2025-04-05', 'to0001', 128);
+
+
+INSERT INTO time_table (
+    time_table_id, department, lec_id, course_id, admin_id, day, start_time, end_time, session_type
+) VALUES 
+    ('TT01', 'ICT', 'LC0001', 'ict2113', 'AD0001', 'Monday', '08:00:00', '10:00:00', 'theory'),
+    ('TT02', 'ICT', 'LC0002', 'ict2122', 'AD0001', 'Tuesday', '09:00:00', '11:00:00', 'theory'),
+    ('TT03', 'ICT', 'LC0003', 'ict2133', 'AD0001', 'Wednesday', '08:30:00', '10:30:00', 'theory'),
+    ('TT04', 'ICT', 'LC0004', 'ict2142', 'AD0001', 'Thursday', '09:00:00', '12:00:00', 'practical'),
+    ('TT05', 'ICT', 'LC0005', 'ict2152', 'AD0001', 'Friday', '08:00:00', '10:30:00', 'theory');
+
+
+INSERT INTO notice (notice_title, notice_content, notice_date) VALUES
+('Exam Schedule', 'The final exams will be held from May 15, 2025 to May 25, 2025. Please check the individual course schedules.', '2025-04-10'),
+('Holiday Announcement', 'The university will be closed on April 21, 2025, due to a national holiday.', '2025-04-15'),
+('Workshop on AI', 'A workshop on Artificial Intelligence will be conducted on April 22, 2025. All students are encouraged to attend.', '2025-04-16'),
+('Semester Registration', 'The semester registration process starts on April 20, 2025. Please complete the registration before April 30, 2025.', '2025-04-17');
+
+INSERT INTO marks 
+(mark_id, lec_id, ug_id, course_id, quiz_1, quiz_2, quiz_3, quiz_4, assesment_1, assesment_2, mid_term, final_theory, final_practical) 
+VALUES
+(1, 'LC0001', 'TG1345', 'ict2113', 77, 89, 56, 88, 0, 0, 66, 55, 44),
+(2, 'LC0001', 'TG1346', 'ict2113', 56, 88, 99, 66, 0, 0, 75, 64, 68),
+(3, 'LC0002', 'TG1345', 'ict2122', 58, 98, 88, 96, 56, 0, 89, 45, 69),
+(4, 'LC0003', 'TG1345', 'ict2133', 85, 77, 96, 0, 89, 78, 0, 85, 69),
+(5, 'LC0004', 'TG1345', 'ict2142', 0, 0, 0, 0, 50, 0, 82, 0, 89),
+(6, 'LC0005', 'TG1345', 'ict2152', 86, 95, 85, 0, 69, 89, 0, 89, 0),
+(7, 'LC0002', 'TG1346', 'ict2122', 78, 88, 99, 56, 89, 0, 66, 99, 0),
+(8, 'LC0003', 'TG1346', 'ict2133', 78, 96, 95, 0, 99, 95, 0, 96, 96),
+(9, 'LC0004', 'TG1346', 'ict2142', 0, 0, 0, 0, 78, 0, 69, 0, 89),
+(10, 'LC0001', 'TG1347', 'ict2113', 67, 70, 72, 0, 0, 0, 73, 65, 60),
+(11, 'LC0002', 'TG1347', 'ict2122', 60, 62, 65, 61, 57, 0, 68, 60, 0),
+(12, 'LC0003', 'TG1347', 'ict2133', 75, 77, 73, 0, 64, 56, 0, 75, 68),
+(13, 'LC0004', 'TG1347', 'ict2142', 0, 0, 0, 0, 60, 0, 72, 0, 82),
+(14, 'LC0005', 'TG1347', 'ict2152', 80, 78, 85, 0, 72, 78, 0, 84, 0),
+(15, 'LC0001', 'TG1348', 'ict2113', 90, 85, 88, 0, 0, 0, 93, 91, 89),
+(16, 'LC0002', 'TG1348', 'ict2122', 82, 80, 83, 85, 84, 0, 88, 86, 0),
+(17, 'LC0003', 'TG1348', 'ict2133', 85, 87, 89, 0, 86, 60, 0, 90, 87),
+(18, 'LC0004', 'TG1348', 'ict2142', 0, 0, 0, 0, 90, 0, 85, 0, 93),
+(19, 'LC0005', 'TG1348', 'ict2152', 88, 90, 87, 0, 84, 58, 0, 89, 0),
+(23, 'LC0001', 'TG1349', 'ict2113', 12, 45, 63, 0, 0, 0, 56, 45, 25),
+(24, 'LC0001', 'TG1350', 'ict2113', 45, 66, 95, 0, 0, 0, 54, 66, 35),
+(25, 'LC0001', 'TG1351', 'ict2113', 78, 56, 42, 0, 0, 0, 66, 56, 55);
+
+
+
+
+CREATE VIEW ca_marks AS
+SELECT 
+    ug_id,
+    course_id,
+	ROUND(
+        CASE 
+            WHEN course_id IN ('ict2113') THEN 
+                -- Calculate sum of all quizzes minus the lowest one (effectively top 2)
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.10 +
+                COALESCE(mid_term, 0) * 0.20 
+
+            WHEN course_id IN ('ict2122') THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) + COALESCE(quiz_4, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0),
+                    COALESCE(quiz_4, 0)
+                )) * 0.10 +
+                COALESCE(assesment_1, 0) * 0.10 +
+                COALESCE(mid_term, 0) * 0.20
+            
+            WHEN course_id IN ('ICT2133') THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.10 +
+                (COALESCE(assesment_1, 0) + COALESCE(assesment_2, 0)) * 0.20 
+            
+            WHEN course_id IN ('ICT2142') THEN 
+                COALESCE(assesment_1, 0) * 0.20 +
+                COALESCE(mid_term, 0) * 0.20 
+
+            WHEN course_id = 'ICT2152' THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.10 +
+                (COALESCE(assesment_1, 0) + COALESCE(assesment_2, 0)) * 0.20 
+          
+            ELSE 0
+        END,
+        2
+    ) AS ca_mark
+FROM 
+    marks;
+
+
+CREATE VIEW ca_eligibility AS
+SELECT 
+    ug_id,
+    course_id,
+    CASE 
+        WHEN course_id = 'ict2113' AND ca_mark >= 15 THEN 'Eligible'
+        WHEN course_id = 'ict2122' AND ca_mark >= 20 THEN 'Eligible'
+        WHEN course_id = 'ICT2133' AND ca_mark >= 15 THEN 'Eligible'
+        WHEN course_id = 'ICT2142' AND ca_mark >= 20 THEN 'Eligible'
+        WHEN course_id = 'ICT2152' AND ca_mark >= 15 THEN 'Eligible'
+        ELSE 'Not Eligible'
+    END AS ca_eligibility_status
+FROM 
+    ca_marks;
+
+
+CREATE VIEW attendance_eligibility AS
+SELECT 	
+    ug_id, 
+    course_id, 
+    session_type, 
+    COUNT(atten_status)/15 * 100 AS `80_percent_percentage`,
+    IF((COUNT(atten_status)/15*100) >= 80, 'Eligible', 'Not Eligible') AS eligibility
+FROM 
+    attendance
+WHERE 
+    atten_status = 'present' AND session_type IN ('theory', 'practical')
+GROUP BY 
+    ug_id, course_id, session_type;
+
+
+CREATE VIEW overall_eligibility AS 
+SELECT 
+    a.ug_id,
+    a.course_id,
+    a.session_type,
+    CASE 
+        WHEN a.eligibility = 'Eligible' AND c.ca_eligibility_status = 'Eligible' THEN 'Eligible'
+        ELSE 'Not Eligible'
+    END AS overrall_eligibility_status
+FROM 
+    attendance_eligibility AS a
+JOIN 
+    ca_eligibility AS c 
+ON 
+    a.ug_id = c.ug_id 
+    AND a.course_id = c.course_id;
+
+
+
+CREATE OR REPLACE VIEW final_exam_marks_view AS
+SELECT
+    ug_id,
+    course_id,
+    ROUND(
+        CASE 
+            
+            WHEN course_id IN ('ict2113') THEN 
+                -- Calculate sum of all quizzes minus the lowest one (effectively top 2)
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.05 +
+                COALESCE(mid_term, 0) * 0.20 +
+                COALESCE(final_theory, 0) * 0.40 +
+                COALESCE(final_practical, 0) * 0.30
+
+            WHEN course_id IN ('ict2122') THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) + COALESCE(quiz_4, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0),
+                    COALESCE(quiz_4, 0)
+                )) * 0.0333 +
+                COALESCE(assesment_1, 0) * 0.10 +
+                COALESCE(mid_term, 0) * 0.20 +
+                COALESCE(final_theory, 0) * 0.60
+            
+            WHEN course_id IN ('ICT2133') THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.05 +
+                (COALESCE(assesment_1, 0) + COALESCE(assesment_2, 0)) * 0.20 +
+                COALESCE(final_theory, 0) * 0.40 +
+                COALESCE(final_practical, 0) * 0.30
+            
+            WHEN course_id IN ('ICT2142') THEN 
+                COALESCE(assesment_1, 0) * 0.20 +
+                COALESCE(mid_term, 0) * 0.20 +
+                COALESCE(final_practical, 0) * 0.60
+
+            WHEN course_id = 'ICT2152' THEN 
+                (COALESCE(quiz_1, 0) + COALESCE(quiz_2, 0) + COALESCE(quiz_3, 0) - 
+                LEAST(
+                    COALESCE(quiz_1, 0), 
+                    COALESCE(quiz_2, 0), 
+                    COALESCE(quiz_3, 0)
+                )) * 0.05 +
+                (COALESCE(assesment_1, 0) + COALESCE(assesment_2, 0)) * 0.20 +
+                COALESCE(final_theory, 0) * 0.70
+          
+            ELSE 0
+        END,
+        2
+    ) AS final_mark
+FROM
+    marks;
+
+CREATE OR REPLACE VIEW exam_grades_view AS
+SELECT 
+    ug_id,
+    course_id,
+    final_mark,
+    CASE
+        WHEN final_mark <= 100 AND final_mark >= 85 THEN 'A+'
+                WHEN final_mark < 85 AND final_mark >= 75 THEN 'A'
+                WHEN final_mark < 75 AND final_mark >= 70 THEN 'A-'
+                WHEN final_mark < 70 AND final_mark >= 65 THEN 'B+'
+                WHEN final_mark < 65 AND final_mark >= 60 THEN 'B'
+                WHEN final_mark < 60 AND final_mark >= 55 THEN 'B-'
+                WHEN final_mark < 55 AND final_mark >= 50 THEN 'C+'
+                WHEN final_mark < 50 AND final_mark >= 45 THEN 'C'
+                WHEN final_mark < 45 AND final_mark >= 40 THEN 'C-'
+                WHEN final_mark < 40 AND final_mark >= 35 THEN 'D+'
+                WHEN final_mark < 35 AND final_mark >= 30 THEN 'D'
+                ELSE 'E'
+    END AS grade
+FROM 
+    final_exam_marks_view;
+
+
+
+CREATE VIEW grade_point_view AS
+SELECT
+    final_exam_marks_view.ug_id,
+    final_exam_marks_view.course_id,
+    final_exam_marks_view.final_mark,
+    IF(final_exam_marks_view.final_mark >= 90, 4.0,
+    IF(final_exam_marks_view.final_mark >= 84, 4.0,
+    IF(final_exam_marks_view.final_mark >= 75, 3.7,
+    IF(final_exam_marks_view.final_mark >= 70, 3.3,
+    IF(final_exam_marks_view.final_mark >= 65, 3.0,
+    IF(final_exam_marks_view.final_mark >= 60, 2.7,
+    IF(final_exam_marks_view.final_mark >= 55, 2.3,
+    IF(final_exam_marks_view.final_mark >= 50, 2.0,
+    IF(final_exam_marks_view.final_mark >= 45, 1.7,
+    IF(final_exam_marks_view.final_mark >= 40, 1.3,
+    IF(final_exam_marks_view.final_mark >= 35, 1.0, 0.0)
+    )))))))))) AS Grade_point
+FROM
+    final_exam_marks_view;
+
+
+CREATE VIEW SGPA_view AS
+SELECT 
+    grade_point_view.ug_id,
+    ROUND((SUM(grade_point_view.Grade_point * course.credit) / SUM(course.credit)), 2) AS SGPA
+FROM 
+    grade_point_view
+JOIN 
+    course ON grade_point_view.course_id = course.course_id
+GROUP BY 
+    grade_point_view.ug_id;
+
+select * from SGPA_view;
+
+
+CREATE VIEW CGPA_view AS
+SELECT 
+    grade_point_view.ug_id,
+    ROUND((SUM(grade_point_view.Grade_point * course.credit) / SUM(course.credit)), 2) AS CGPA
+FROM 
+    grade_point_view
+JOIN 
+    course ON grade_point_view.course_id = course.course_id
+WHERE 
+    course.course_id != 'ENG2112'  
+GROUP BY 
+    grade_point_view.ug_id;
+
+CREATE VIEW gradesOfUgs AS
+SELECT 
+    eg.ug_id,
+    eg.course_id,
+    c.course_name,
+    eg.grade,
+    sg.SGPA,
+    cg.CGPA
+FROM exam_grades_view eg
+JOIN course c ON eg.course_id = c.course_id
+LEFT JOIN SGPA_view sg ON eg.ug_id = sg.ug_id
+LEFT JOIN CGPA_view cg ON eg.ug_id = cg.ug_id;
+
+
+
+set foreign_key_checks = 1;
+
+
+select * from ca_marks;
+select * from ca_eligibility;
+select * from overall_eligibility;
+select * from exam_grades_view;
+select * from grade_point_view;
+select * from SGPA_view;
+select * from CGPA_view;
+select * from gradesOfUgs;

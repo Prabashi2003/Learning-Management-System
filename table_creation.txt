@@ -1,0 +1,142 @@
+create database javaminiproject;
+use javaminiproject;
+
+create table user 
+(
+user_id char(6) primary key NOT NULL,
+user_password varchar(255) NOT NULL,
+user_name varchar(50) NOT NULL,
+user_email varchar(50) ,
+user_phone varchar(13),
+user_pro_pic varchar(300),
+user_role ENUM('admin','lecturer','undergraduate','tech_officer') NOT NULL
+
+);
+
+create table admin
+(
+admin_id char(6) primary key
+);
+
+create table lecturer
+(
+lec_id char(6) primary key
+);
+
+create table undergraduate
+(
+ug_id char(6) primary key,
+ug_batch INT
+);
+
+create table tech_officer
+(
+to_id char(6) primary key,
+to_department varchar(3)
+);
+
+create table notice
+(
+notice_id int AUTO_INCREMENT primary key ,
+notice_title varchar(30),
+notice_content varchar(500),
+notice_date DATE
+);
+
+create table time_table
+(
+time_table_id varchar(5) primary key,
+department varchar(3),
+lec_id char(6),
+course_id char(7),
+admin_id char(6),
+day varchar(10),
+start_time time,
+end_time time,
+session_type ENUM('theory','practical')
+);
+
+
+create table marks
+(
+mark_id int AUTO_INCREMENT primary key,
+lec_id char(6),
+ug_id char(6),
+course_id char(7),
+quiz_1 float,
+quiz_2 float,
+quiz_3 float,
+quiz_4 float,
+assesment_1 float,
+assesment_2 float,
+mid_term float,
+final_theory float,
+final_practical float
+);
+create table course
+(
+course_id char(7) primary key,
+course_name varchar(50),
+lec_id char(6),
+credit INT,
+course_type ENUM('theory','practical','both')
+);
+
+CREATE TABLE lecture_materials (
+    material_id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id CHAR(7) NOT NULL,
+    material_name VARCHAR(100) NOT NULL,
+    material_path VARCHAR(255) NOT NULL,  -- stores local file path
+    material_type ENUM('pdf', 'video', 'ppt', 'other') NOT NULL,
+    FOREIGN KEY (course_id) REFERENCES course(course_id)
+);
+
+
+CREATE TABLE medical (
+    medical_id INT AUTO_INCREMENT PRIMARY KEY,
+    ug_id VARCHAR(10) NOT NULL,
+    course_id VARCHAR(10) NOT NULL,
+    session_type VARCHAR(10) NOT NULL,
+    reason VARCHAR(500) NOT NULL,
+    medical_date DATE NOT NULL,
+    to_id VARCHAR(10) NOT NULL,
+    atten_id INT NOT NULL
+);
+
+
+create table attendance
+(
+atten_id int AUTO_INCREMENT primary key,
+to_id char(6),
+ug_id char(6),
+course_id char(7),
+atten_date DATE,
+session_type ENUM('theory','practical') NOT NULL,
+atten_status ENUM('present','absent','medical') NOT NULL
+);
+
+
+
+alter table admin add foreign key(admin_id) references user(user_id) on update cascade;
+alter table undergraduate add foreign key(ug_id) references user(user_id) on update cascade;
+alter table lecturer add foreign key(lec_id) references user(user_id) on update cascade;
+alter table tech_officer add foreign key(to_id) references user(user_id) on update cascade;
+
+alter table attendance add foreign key(ug_id) references undergraduate(ug_id) on update cascade;
+alter table attendance add foreign key(course_id) references course(course_id) on update cascade;
+alter table attendance add foreign key(to_id) references tech_officer(to_id) on update cascade;
+
+alter table medical add foreign key(ug_id) references undergraduate(ug_id) on update cascade;
+alter table medical add foreign key(course_id) references course(course_id) on update cascade;
+alter table medical add foreign key(to_id) references tech_officer(to_id) on update cascade;
+alter table medical add foreign key(atten_id) references attendance(atten_id) on update cascade;
+
+alter table course add foreign key(lec_id) references lecturer(lec_id) on update cascade;
+
+alter table marks add foreign key(lec_id) references lecturer(lec_id) on update cascade;
+alter table marks add foreign key(ug_id) references undergraduate(ug_id) on update cascade;
+alter table marks add foreign key(course_id) references course(course_id) on update cascade;
+
+alter table time_table add foreign key(lec_id) references lecturer(lec_id) on update cascade;
+alter table time_table add foreign key(course_id) references course(course_id) on update cascade;
+alter table time_table add foreign key(admin_id) references admin(admin_id) on update cascade;
